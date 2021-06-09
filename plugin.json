@@ -1,5 +1,5 @@
 {
-    "id": "your-plugin-id",
+    "id": "nlp-amazon-translation",
     "version": "0.1.0",
     "meta": {
         "label": "Amazon Translation",
