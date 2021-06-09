@@ -2,7 +2,7 @@
   "meta": {
     "label": "Amazon Translation",
     "displayOrderRank": 1,
-    "description": "Translate a text column to another language with  [Google Cloud Translation](https://cloud.google.com/translate/docs/basic/translating-text)",
+    "description": "Translate a text column to another language with  [Amazon Translation](https://aws.amazon.com/translate/)",
     "icon": "icon-gcp-translation-api icon-cloud"
   },
   "kind": "PYTHON",
