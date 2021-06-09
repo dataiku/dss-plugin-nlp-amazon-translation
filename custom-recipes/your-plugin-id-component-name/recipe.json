@@ -79,14 +79,6 @@
           "value": "az"
         },
         {
-          "label": "Basque [eu]",
-          "value": "eu"
-        },
-        {
-          "label": "Belarusian [be]",
-          "value": "be"
-        },
-        {
           "label": "Bengali [bn]",
           "value": "bn"
         },
@@ -103,20 +95,12 @@
           "value": "ca"
         },
         {
-          "label": "Cebuano [ceb]",
-          "value": "ceb"
-        },
-        {
-          "label": "Chinese (Simplified) [zh-CN]",
-          "value": "zh-CN"
+          "label": "Chinese (Simplified) [zh]",
+          "value": "zh"
         },
         {
           "label": "Chinese (Traditional) [zh-TW]",
           "value": "zh-TW"
-        },
-        {
-          "label": "Corsican [co]",
-          "value": "co"
         },
         {
           "label": "Croatian [hr]",
@@ -131,6 +115,10 @@
           "value": "da"
         },
         {
+          "label": "Dari [fa-AF]",
+          "value": "fa-AF"
+        },
+        {
           "label": "Dutch [nl]",
           "value": "nl"
         },
@@ -139,12 +127,16 @@
           "value": "en"
         },
         {
-          "label": "Esperanto [eo]",
-          "value": "eo"
-        },
-        {
           "label": "Estonian [et]",
           "value": "et"
+        },
+        {
+          "label": "Farsi (Persian) [fa]",
+          "value": "fa"
+        },
+        {
+          "label": "Filipino Tagalog [tl]",
+          "value": "tl"
         },
         {
           "label": "Finnish [fi]",
@@ -155,12 +147,8 @@
           "value": "fr"
         },
         {
-          "label": "Frisian [fy]",
-          "value": "fy"
-        },
-        {
-          "label": "Galician [gl]",
-          "value": "gl"
+          "label": "French (Canada) [fr-CA]",
+          "value": "fr-CA"
         },
         {
           "label": "Georgian [ka]",
@@ -187,20 +175,12 @@
           "value": "ha"
         },
         {
-          "label": "Hawaiian [haw]",
-          "value": "haw"
-        },
-        {
           "label": "Hebrew [he]",
           "value": "he"
         },
         {
           "label": "Hindi [hi]",
           "value": "hi"
-        },
-        {
-          "label": "Hmong [hmn]",
-          "value": "hmn"
         },
         {
           "label": "Hungarian [hu]",
@@ -211,16 +191,8 @@
           "value": "is"
         },
         {
-          "label": "Igbo [ig]",
-          "value": "ig"
-        },
-        {
           "label": "Indonesian [id]",
           "value": "id"
-        },
-        {
-          "label": "Irish [ga]",
-          "value": "ga"
         },
         {
           "label": "Italian [it]",
@@ -231,10 +203,6 @@
           "value": "ja"
         },
         {
-          "label": "Javanese [jv]",
-          "value": "jv"
-        },
-        {
           "label": "Kannada [kn]",
           "value": "kn"
         },
@@ -243,32 +211,8 @@
           "value": "kk"
         },
         {
-          "label": "Khmer [km]",
-          "value": "km"
-        },
-        {
-          "label": "Kinyarwanda [rw]",
-          "value": "rw"
-        },
-        {
           "label": "Korean [ko]",
           "value": "ko"
-        },
-        {
-          "label": "Kurdish [ku]",
-          "value": "ku"
-        },
-        {
-          "label": "Kyrgyz [ky]",
-          "value": "ky"
-        },
-        {
-          "label": "Lao [lo]",
-          "value": "lo"
-        },
-        {
-          "label": "Latin [la]",
-          "value": "la"
         },
         {
           "label": "Latvian [lv]",
@@ -279,16 +223,8 @@
           "value": "lt"
         },
         {
-          "label": "Luxembourgish [lb]",
-          "value": "lb"
-        },
-        {
           "label": "Macedonian [mk]",
           "value": "mk"
-        },
-        {
-          "label": "Malagasy [mg]",
-          "value": "mg"
         },
         {
           "label": "Malay [ms]",
@@ -303,56 +239,28 @@
           "value": "mt"
         },
         {
-          "label": "Maori [mi]",
-          "value": "mi"
-        },
-        {
-          "label": "Marathi [mr]",
-          "value": "mr"
-        },
-        {
           "label": "Mongolian [mn]",
           "value": "mn"
-        },
-        {
-          "label": "Myanmar (Burmese) [my]",
-          "value": "my"
-        },
-        {
-          "label": "Nepali [ne]",
-          "value": "ne"
         },
         {
           "label": "Norwegian [no]",
           "value": "no"
         },
         {
-          "label": "Nyanja (Chichewa) [ny]",
-          "value": "ny"
-        },
-        {
-          "label": "Odia (Oriya) [or]",
-          "value": "or"
+          "label": "Persian [fa]",
+          "value": "fa"
         },
         {
           "label": "Pashto [ps]",
           "value": "ps"
         },
         {
-          "label": "Persian [fa]",
-          "value": "fa"
-        },
-        {
           "label": "Polish [pl]",
           "value": "pl"
         },
         {
-          "label": "Portuguese (Portugal, Brazil) [pt]",
+          "label": "Portuguese [pt]",
           "value": "pt"
-        },
-        {
-          "label": "Punjabi [pa]",
-          "value": "pa"
         },
         {
           "label": "Romanian [ro]",
@@ -363,31 +271,11 @@
           "value": "ru"
         },
         {
-          "label": "Samoan [sm]",
-          "value": "sm"
-        },
-        {
-          "label": "Scots Gaelic [gd]",
-          "value": "gd"
-        },
-        {
           "label": "Serbian [sr]",
           "value": "sr"
         },
         {
-          "label": "Sesotho [st]",
-          "value": "st"
-        },
-        {
-          "label": "Shona [sn]",
-          "value": "sn"
-        },
-        {
-          "label": "Sindhi [sd]",
-          "value": "sd"
-        },
-        {
-          "label": "Sinhala (Sinhalese) [si]",
+          "label": "Sinhala [si]",
           "value": "si"
         },
         {
@@ -407,8 +295,8 @@
           "value": "es"
         },
         {
-          "label": "Sundanese [su]",
-          "value": "su"
+          "label": "Spanish (Mexico) [es-MX]",
+          "value": "es-MX"
         },
         {
           "label": "Swahili [sw]",
@@ -419,20 +307,12 @@
           "value": "sv"
         },
         {
-          "label": "Tagalog (Filipino) [tl]",
+          "label": "Tagalog [tl]",
           "value": "tl"
-        },
-        {
-          "label": "Tajik [tg]",
-          "value": "tg"
         },
         {
           "label": "Tamil [ta]",
           "value": "ta"
-        },
-        {
-          "label": "Tatar [tt]",
-          "value": "tt"
         },
         {
           "label": "Telugu [te]",
@@ -447,20 +327,12 @@
           "value": "tr"
         },
         {
-          "label": "Turkmen [tk]",
-          "value": "tk"
-        },
-        {
           "label": "Ukrainian [uk]",
           "value": "uk"
         },
         {
           "label": "Urdu [ur]",
           "value": "ur"
-        },
-        {
-          "label": "Uyghur [ug]",
-          "value": "ug"
         },
         {
           "label": "Uzbek [uz]",
@@ -473,22 +345,6 @@
         {
           "label": "Welsh [cy]",
           "value": "cy"
-        },
-        {
-          "label": "Xhosa [xh]",
-          "value": "xh"
-        },
-        {
-          "label": "Yiddish [yi]",
-          "value": "yi"
-        },
-        {
-          "label": "Yoruba [yo]",
-          "value": "yo"
-        },
-        {
-          "label": "Zulu [zu]",
-          "value": "zu"
         }
       ],
       "defaultValue": "auto"
@@ -525,14 +381,6 @@
           "value": "az"
         },
         {
-          "label": "Basque [eu]",
-          "value": "eu"
-        },
-        {
-          "label": "Belarusian [be]",
-          "value": "be"
-        },
-        {
           "label": "Bengali [bn]",
           "value": "bn"
         },
@@ -549,20 +397,12 @@
           "value": "ca"
         },
         {
-          "label": "Cebuano [ceb]",
-          "value": "ceb"
-        },
-        {
-          "label": "Chinese (Simplified) [zh-CN]",
-          "value": "zh-CN"
+          "label": "Chinese (Simplified) [zh]",
+          "value": "zh"
         },
         {
           "label": "Chinese (Traditional) [zh-TW]",
           "value": "zh-TW"
-        },
-        {
-          "label": "Corsican [co]",
-          "value": "co"
         },
         {
           "label": "Croatian [hr]",
@@ -577,6 +417,10 @@
           "value": "da"
         },
         {
+          "label": "Dari [fa-AF]",
+          "value": "fa-AF"
+        },
+        {
           "label": "Dutch [nl]",
           "value": "nl"
         },
@@ -585,12 +429,16 @@
           "value": "en"
         },
         {
-          "label": "Esperanto [eo]",
-          "value": "eo"
-        },
-        {
           "label": "Estonian [et]",
           "value": "et"
+        },
+        {
+          "label": "Farsi (Persian) [fa]",
+          "value": "fa"
+        },
+        {
+          "label": "Filipino Tagalog [tl]",
+          "value": "tl"
         },
         {
           "label": "Finnish [fi]",
@@ -601,12 +449,8 @@
           "value": "fr"
         },
         {
-          "label": "Frisian [fy]",
-          "value": "fy"
-        },
-        {
-          "label": "Galician [gl]",
-          "value": "gl"
+          "label": "French (Canada) [fr-CA]",
+          "value": "fr-CA"
         },
         {
           "label": "Georgian [ka]",
@@ -633,20 +477,12 @@
           "value": "ha"
         },
         {
-          "label": "Hawaiian [haw]",
-          "value": "haw"
-        },
-        {
           "label": "Hebrew [he]",
           "value": "he"
         },
         {
           "label": "Hindi [hi]",
           "value": "hi"
-        },
-        {
-          "label": "Hmong [hmn]",
-          "value": "hmn"
         },
         {
           "label": "Hungarian [hu]",
@@ -657,16 +493,8 @@
           "value": "is"
         },
         {
-          "label": "Igbo [ig]",
-          "value": "ig"
-        },
-        {
           "label": "Indonesian [id]",
           "value": "id"
-        },
-        {
-          "label": "Irish [ga]",
-          "value": "ga"
         },
         {
           "label": "Italian [it]",
@@ -677,10 +505,6 @@
           "value": "ja"
         },
         {
-          "label": "Javanese [jv]",
-          "value": "jv"
-        },
-        {
           "label": "Kannada [kn]",
           "value": "kn"
         },
@@ -689,32 +513,8 @@
           "value": "kk"
         },
         {
-          "label": "Khmer [km]",
-          "value": "km"
-        },
-        {
-          "label": "Kinyarwanda [rw]",
-          "value": "rw"
-        },
-        {
           "label": "Korean [ko]",
           "value": "ko"
-        },
-        {
-          "label": "Kurdish [ku]",
-          "value": "ku"
-        },
-        {
-          "label": "Kyrgyz [ky]",
-          "value": "ky"
-        },
-        {
-          "label": "Lao [lo]",
-          "value": "lo"
-        },
-        {
-          "label": "Latin [la]",
-          "value": "la"
         },
         {
           "label": "Latvian [lv]",
@@ -725,16 +525,8 @@
           "value": "lt"
         },
         {
-          "label": "Luxembourgish [lb]",
-          "value": "lb"
-        },
-        {
           "label": "Macedonian [mk]",
           "value": "mk"
-        },
-        {
-          "label": "Malagasy [mg]",
-          "value": "mg"
         },
         {
           "label": "Malay [ms]",
@@ -749,56 +541,28 @@
           "value": "mt"
         },
         {
-          "label": "Maori [mi]",
-          "value": "mi"
-        },
-        {
-          "label": "Marathi [mr]",
-          "value": "mr"
-        },
-        {
           "label": "Mongolian [mn]",
           "value": "mn"
-        },
-        {
-          "label": "Myanmar (Burmese) [my]",
-          "value": "my"
-        },
-        {
-          "label": "Nepali [ne]",
-          "value": "ne"
         },
         {
           "label": "Norwegian [no]",
           "value": "no"
         },
         {
-          "label": "Nyanja (Chichewa) [ny]",
-          "value": "ny"
-        },
-        {
-          "label": "Odia (Oriya) [or]",
-          "value": "or"
+          "label": "Persian [fa]",
+          "value": "fa"
         },
         {
           "label": "Pashto [ps]",
           "value": "ps"
         },
         {
-          "label": "Persian [fa]",
-          "value": "fa"
-        },
-        {
           "label": "Polish [pl]",
           "value": "pl"
         },
         {
-          "label": "Portuguese (Portugal, Brazil) [pt]",
+          "label": "Portuguese [pt]",
           "value": "pt"
-        },
-        {
-          "label": "Punjabi [pa]",
-          "value": "pa"
         },
         {
           "label": "Romanian [ro]",
@@ -809,31 +573,11 @@
           "value": "ru"
         },
         {
-          "label": "Samoan [sm]",
-          "value": "sm"
-        },
-        {
-          "label": "Scots Gaelic [gd]",
-          "value": "gd"
-        },
-        {
           "label": "Serbian [sr]",
           "value": "sr"
         },
         {
-          "label": "Sesotho [st]",
-          "value": "st"
-        },
-        {
-          "label": "Shona [sn]",
-          "value": "sn"
-        },
-        {
-          "label": "Sindhi [sd]",
-          "value": "sd"
-        },
-        {
-          "label": "Sinhala (Sinhalese) [si]",
+          "label": "Sinhala [si]",
           "value": "si"
         },
         {
@@ -853,8 +597,8 @@
           "value": "es"
         },
         {
-          "label": "Sundanese [su]",
-          "value": "su"
+          "label": "Spanish (Mexico) [es-MX]",
+          "value": "es-MX"
         },
         {
           "label": "Swahili [sw]",
@@ -865,20 +609,12 @@
           "value": "sv"
         },
         {
-          "label": "Tagalog (Filipino) [tl]",
+          "label": "Tagalog [tl]",
           "value": "tl"
-        },
-        {
-          "label": "Tajik [tg]",
-          "value": "tg"
         },
         {
           "label": "Tamil [ta]",
           "value": "ta"
-        },
-        {
-          "label": "Tatar [tt]",
-          "value": "tt"
         },
         {
           "label": "Telugu [te]",
@@ -893,20 +629,12 @@
           "value": "tr"
         },
         {
-          "label": "Turkmen [tk]",
-          "value": "tk"
-        },
-        {
           "label": "Ukrainian [uk]",
           "value": "uk"
         },
         {
           "label": "Urdu [ur]",
           "value": "ur"
-        },
-        {
-          "label": "Uyghur [ug]",
-          "value": "ug"
         },
         {
           "label": "Uzbek [uz]",
@@ -919,22 +647,6 @@
         {
           "label": "Welsh [cy]",
           "value": "cy"
-        },
-        {
-          "label": "Xhosa [xh]",
-          "value": "xh"
-        },
-        {
-          "label": "Yiddish [yi]",
-          "value": "yi"
-        },
-        {
-          "label": "Yoruba [yo]",
-          "value": "yo"
-        },
-        {
-          "label": "Zulu [zu]",
-          "value": "zu"
         }
       ],
       "defaultValue": "en"
