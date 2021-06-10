@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 """Module with functions to parallelize API calls with error handling"""
 
-import logging
-import inspect
-import math
-from typing import Callable, AnyStr, List, Tuple, NamedTuple, Dict, Union
+import inspect, logging, math
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import Callable, AnyStr, List, Tuple, NamedTuple, Dict, Union
 
 import pandas as pd
 from more_itertools import chunked, flatten

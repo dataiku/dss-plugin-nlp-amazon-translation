@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-from typing import Dict, AnyStr
 import json
+from typing import Dict, AnyStr
 
 import dataiku
 from dataiku.customrecipe import get_recipe_config, get_input_names_for_role, get_output_names_for_role
 
-from plugin_io_utils import ErrorHandlingEnum, validate_column_input
 from amazon_translation_api_client import API_EXCEPTIONS, get_client
-from dku_io_utils import set_column_description
-from api_parallelizer import api_parallelizer
 from amazon_translation_api_formatting import TranslationAPIFormatter
+from api_parallelizer import api_parallelizer
+from dku_io_utils import set_column_description
+from plugin_io_utils import ErrorHandlingEnum, validate_column_input
 
 # ==============================================================================
 # SETUP

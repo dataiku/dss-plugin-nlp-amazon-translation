@@ -2,8 +2,9 @@
 """Module with classes to format results from the Google Cloud Translation API"""
 
 import logging
-import pandas as pd
 from typing import AnyStr, Dict
+
+import pandas as pd
 
 from plugin_io_utils import (
     API_COLUMN_NAMES_DESCRIPTION_DICT,

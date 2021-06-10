@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """Module with utility functions to call the Google translation API"""
 
-import logging
-import json
+import json, logging
 
 import boto3
 from botocore.exceptions import ClientError
