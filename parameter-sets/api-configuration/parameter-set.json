@@ -31,7 +31,7 @@
         {
             "name": "aws_session_token",
             "label": "AWS session token",
-            "description": "AWS session token as string. If empty, attempts to ascertain credentials from the environment.",
+            "description": "Optional AWS session token as string. If empty, attempts to ascertain credentials from the environment.",
             "type": "STRING",
             "mandatory": false
         },
@@ -60,7 +60,7 @@
         {
             "name": "api_quota_rate_limit",
             "label": "Rate limit",
-            "description": "Maximum number of requests per period for one DSS activity. Reduce for concurrent activities.",
+            "description": "(TODO: REMOVE?) Maximum number of requests per period for one DSS activity. Reduce for concurrent activities.",
             "type": "INT",
             "mandatory": true,
             "defaultValue": 6000,

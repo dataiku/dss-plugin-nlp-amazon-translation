@@ -1,6 +1,6 @@
 {
     "id": "nlp-amazon-translation",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "meta": {
         "label": "Amazon Translation",
         "category": "Natural Language Processing",
