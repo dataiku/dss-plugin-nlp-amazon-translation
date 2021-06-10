@@ -32,9 +32,9 @@ def get_client(aws_access_key_id=None, aws_secret_access_key=None, aws_session_t
         client = boto3.client(
             service_name='translate', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key, aws_session_token=aws_session_token, region_name=aws_region_name
         )
-    except (ValueError, TypeError) as e:
+    except ClientError as e:
         logging.error(e)
-        raise ValueError("Invalid credentials provided.")
+        raise ClientError("Invalid credentials provided.")
 
     logging.info("Credentials loaded")
     return client
