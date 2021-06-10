@@ -156,11 +156,11 @@ class TranslationAPIFormatter(GenericAPIFormatter):
     def _compute_column_description(self):
         self.column_description_dict[
             self.translated_text_column_name
-        ] = f"{self.target_language_label} translation of the '{self.input_column}' column by Google Cloud Translation"
+        ] = f"{self.target_language_label} translation of the '{self.input_column}' column by Amazon Translation"
         if not self.source_language:
             self.column_description_dict[
                 self.detected_language_column_name
-            ] = f"Detected language of the '{self.input_column}' column by Google Cloud Translation"
+            ] = f"Detected language of the '{self.input_column}' column by Amazon Translation"
 
     def format_row(self, row: Dict) -> Dict:
         raw_response = row[self.api_column_names.response]
