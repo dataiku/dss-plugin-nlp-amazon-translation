@@ -79,7 +79,7 @@
             "mandatory": true,
             "defaultValue": 4,
             "minI": 1,
-            "maxI": 100
+            "maxI": 1000
         }
     ]
 }
