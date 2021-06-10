@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Module with classes to format results from the Google Cloud Translation API"""
+"""Module with classes to format results from the Amazon Translation API"""
 
 import logging
 from typing import AnyStr, Dict
@@ -96,7 +96,7 @@ LANGUAGE_CODE_LABELS = {
 
 class GenericAPIFormatter:
     """
-    Geric Formatter class for API responses:
+    Generic Formatter class for API responses:
     - initialize with generic parameters
     - compute generic column descriptions
     - apply format_row to dataframe
