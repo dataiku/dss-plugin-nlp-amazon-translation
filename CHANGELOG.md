@@ -1,13 +1,5 @@
 # Changelog
 
-## Version X.Y.Z - Type of release (*) - YYYY-MM-DD
-- Changes 1 ...
-- Changes 2 ... 
-- ...
+## [Version 1.0.0](https://github.com/dataiku/dss-plugin-nlp-amazon-translation/releases/tag/v1.0.0) - Initial release - 2021-06
 
-(*) Possible types of releases
-
-- Initial release
-- Bugfix release
-- Feature release
-- .... 
+- ✨ Integration with the [Amazon Translation API - Basic edition](https://aws.amazon.com/translate/)
