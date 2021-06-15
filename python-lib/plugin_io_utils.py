@@ -1,13 +1,17 @@
 # -*- coding: utf-8 -*-
 """Module with read/write utility functions which are *not* based on the Dataiku API"""
 
-import logging, json
-from collections import OrderedDict, namedtuple
+import json
+import logging
+from collections import OrderedDict
+from collections import namedtuple
 from enum import Enum
-from typing import AnyStr, List, NamedTuple, Dict
+from typing import AnyStr
+from typing import Dict
+from typing import List
+from typing import NamedTuple
 
 import pandas as pd
-
 
 # ==============================================================================
 # CONSTANT DEFINITION

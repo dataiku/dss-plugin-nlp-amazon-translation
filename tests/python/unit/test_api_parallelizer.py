@@ -4,14 +4,15 @@
 # see https://docs.pytest.org for more information
 
 import json
-from typing import AnyStr, Dict
 from enum import Enum
+from typing import AnyStr
+from typing import Dict
 
 import pandas as pd
-from botocore.exceptions import ClientError, BotoCoreError
+from botocore.exceptions import BotoCoreError
+from botocore.exceptions import ClientError
 
 from api_parallelizer import api_parallelizer  # noqa
-
 
 # ==============================================================================
 # CONSTANT DEFINITION

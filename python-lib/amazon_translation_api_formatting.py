@@ -2,18 +2,18 @@
 """Module with classes to format results from the Amazon Translation API"""
 
 import logging
-from typing import AnyStr, Dict
+from typing import AnyStr
+from typing import Dict
 
 import pandas as pd
 
-from plugin_io_utils import (
-    API_COLUMN_NAMES_DESCRIPTION_DICT,
-    ErrorHandlingEnum,
-    build_unique_column_names,
-    generate_unique,
-    safe_json_loads,
-    move_api_columns_to_end,
-)
+from plugin_io_utils import API_COLUMN_NAMES_DESCRIPTION_DICT
+from plugin_io_utils import ErrorHandlingEnum
+from plugin_io_utils import build_unique_column_names
+from plugin_io_utils import generate_unique
+from plugin_io_utils import safe_json_loads
+from plugin_io_utils import move_api_columns_to_end
+
 
 LANGUAGE_CODE_LABELS = {
     'af': 'Afrikaans',

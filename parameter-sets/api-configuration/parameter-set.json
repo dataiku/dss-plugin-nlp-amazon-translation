@@ -43,30 +43,6 @@
             "mandatory": false
         },
         {
-            "name": "separator_api_quota",
-            "label": "API quota",
-            "type": "SEPARATOR",
-            "description": "(TODO: REMOVE?) Throttling to stay within the quota defined by Google Cloud: https://cloud.google.com/translate/quotas"
-        },
-        {
-            "name": "api_quota_period",
-            "label": "Period",
-            "description": "(TODO: REMOVE?) Reset period of the quota in seconds. Defined by Google Cloud.",
-            "type": "INT",
-            "mandatory": true,
-            "defaultValue": 60,
-            "minI": 1
-        },
-        {
-            "name": "api_quota_rate_limit",
-            "label": "Rate limit",
-            "description": "(TODO: REMOVE?) Maximum number of requests per period for one DSS activity. Reduce for concurrent activities.",
-            "type": "INT",
-            "mandatory": true,
-            "defaultValue": 6000,
-            "minI": 1
-        },
-        {
             "name": "separator_performance",
             "label": "Parallelization",
             "type": "SEPARATOR"
@@ -79,7 +55,17 @@
             "mandatory": true,
             "defaultValue": 4,
             "minI": 1,
-            "maxI": 1000
+            "maxI": 100
+        },
+        {
+            "name": "max_attempts",
+            "label": "Maximum Attempts",
+            "description": "Maximum number of attempts when an API request fails.",
+            "type": "INT",
+            "mandatory": true,
+            "defaultValue": 20,
+            "minI": 1,
+            "maxI": 100
         }
     ]
 }

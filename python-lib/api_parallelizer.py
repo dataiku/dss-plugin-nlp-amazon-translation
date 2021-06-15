@@ -1,16 +1,26 @@
 # -*- coding: utf-8 -*-
 """Module with functions to parallelize API calls with error handling"""
 
-import inspect, logging, math
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from typing import Callable, AnyStr, List, Tuple, NamedTuple, Dict, Union
+import inspect
+import logging
+import math
+from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import as_completed
+from typing import AnyStr
+from typing import Callable
+from typing import Dict
+from typing import List
+from typing import NamedTuple
+from typing import Tuple
+from typing import Union
 
 import pandas as pd
-from more_itertools import chunked, flatten
+from more_itertools import chunked
+from more_itertools import flatten
 from tqdm.auto import tqdm as tqdm_auto
 
-from plugin_io_utils import ErrorHandlingEnum, build_unique_column_names
-
+from plugin_io_utils import build_unique_column_names
+from plugin_io_utils import ErrorHandlingEnum
 
 # ==============================================================================
 # CONSTANT DEFINITION

@@ -1,15 +1,19 @@
 # -*- coding: utf-8 -*-
 import json
-from typing import Dict, AnyStr
+from typing import Dict
+from typing import AnyStr
 
 import dataiku
-from dataiku.customrecipe import get_recipe_config, get_input_names_for_role, get_output_names_for_role
+from dataiku.customrecipe import get_recipe_config
+from dataiku.customrecipe import get_input_names_for_role
+from dataiku.customrecipe import get_output_names_for_role
 
 from amazon_translation_api_client import API_EXCEPTIONS, get_client
 from amazon_translation_api_formatting import TranslationAPIFormatter
 from api_parallelizer import api_parallelizer
 from dku_io_utils import set_column_description
-from plugin_io_utils import ErrorHandlingEnum, validate_column_input
+from plugin_io_utils import ErrorHandlingEnum
+from plugin_io_utils import validate_column_input
 
 # ==============================================================================
 # SETUP
@@ -31,12 +35,12 @@ error_handling = ErrorHandlingEnum.FAIL if get_recipe_config().get("fail_on_erro
 
 # Params for translation
 client = get_client(
-    api_configuration_preset.get("aws_access_key_id"), api_configuration_preset.get("aws_secret_access_key"), api_configuration_preset.get("aws_session_token"), api_configuration_preset.get("aws_region_name")
+    aws_access_key_id=api_configuration_preset.get("aws_access_key_id"), 
+    aws_secret_access_key=api_configuration_preset.get("aws_secret_access_key"), 
+    aws_session_token=api_configuration_preset.get("aws_session_token"), 
+    aws_region_name=api_configuration_preset.get("aws_region_name"),
+    max_attempts=api_configuration_preset.get("max_attempts")
     )
-# TODO: Remove quota rate limit?
-api_quota_rate_limit = api_configuration_preset.get("api_quota_rate_limit")
-api_quota_period = api_configuration_preset.get("api_quota_period")
-
 
 # ==============================================================================
 # DEFINITIONS

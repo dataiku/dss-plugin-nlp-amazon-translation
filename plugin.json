@@ -4,7 +4,7 @@
     "meta": {
         "label": "Amazon Translation",
         "category": "Natural Language Processing",
-        "description": "Use Amazon Translation to translate text",
+        "description": "Use Amazon Translate to translate text",
         "author": "Dataiku (Niklas MUENNIGHOFF, Mehdi HAMOUMI)",
         "icon": "icon-amazon-translate icon-cloud",
         "licenseInfo": "Apache Software License",
