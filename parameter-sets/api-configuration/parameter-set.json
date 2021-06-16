@@ -58,12 +58,17 @@
             "maxI": 100
         },
         {
+            "name": "separator_api_quota",
+            "label": "Attempts",
+            "type": "SEPARATOR"
+        },
+        {
             "name": "max_attempts",
             "label": "Maximum Attempts",
             "description": "Maximum number of attempts when an API request fails.",
             "type": "INT",
             "mandatory": true,
-            "defaultValue": 20,
+            "defaultValue": 5,
             "minI": 1,
             "maxI": 100
         }
