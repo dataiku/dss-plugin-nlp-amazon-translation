@@ -17,7 +17,7 @@
         {
             "name": "aws_access_key_id",
             "label": "AWS access key id",
-            "description": "AWS access key as string. If empty, attempts to ascertain credentials from the environment.",
+            "description": "AWS access key as string. If empty, checks environment variables (https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html#environment-variables).",
             "type": "STRING",
             "mandatory": false
         },
