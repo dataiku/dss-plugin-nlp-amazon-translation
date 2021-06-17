@@ -24,21 +24,21 @@
         {
             "name": "aws_secret_access_key",
             "label": "AWS secret access key",
-            "description": "AWS secret access key as string. If empty, attempts to ascertain credentials from the environment.",
+            "description": "AWS secret access key as string. If empty, checks environment variables (https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html#environment-variables).",
             "type": "PASSWORD",
             "mandatory": false
         },
         {
             "name": "aws_session_token",
             "label": "AWS session token",
-            "description": "Optional AWS session token as string. If empty, attempts to ascertain credentials from the environment.",
+            "description": "Optional AWS session token as string. If empty, checks environment variables (https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html#environment-variables).",
             "type": "STRING",
             "mandatory": false
         },
         {
             "name": "aws_region_name",
             "label": "AWS region name",
-            "description": "AWS region name as a string. If empty, attempts to ascertain credentials from the environment.",
+            "description": "AWS region name as a string. If empty, checks environment variables (https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).",
             "type": "STRING",
             "mandatory": false
         },
