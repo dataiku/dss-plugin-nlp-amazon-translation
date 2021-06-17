@@ -34,6 +34,7 @@ def get_client(
     """
     # Try to ascertain credentials from environment
     if aws_access_key_id is None or aws_access_key_id == "":
+        logging.info("Attempting to load credentials from environment.")
         return boto3.client(service_name='translate')
     
     try:
