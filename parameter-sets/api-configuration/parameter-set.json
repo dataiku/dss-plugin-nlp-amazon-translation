@@ -50,7 +50,7 @@
         {
             "name": "parallel_workers",
             "label": "Concurrency",
-            "description": "Number of threads calling the API in parallel (max 100). Increase to speed-up computation within the quota defined above.",
+            "description": "Number of threads calling the API in parallel (max 100). Increase to speed-up computation.",
             "type": "INT",
             "mandatory": true,
             "defaultValue": 4,
