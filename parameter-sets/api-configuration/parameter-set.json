@@ -65,7 +65,7 @@
         {
             "name": "max_attempts",
             "label": "Maximum Attempts",
-            "description": "Maximum number of attempts when an API request fails.",
+            "description": "Maximum number of retry attempts when an API request fails.",
             "type": "INT",
             "mandatory": true,
             "defaultValue": 5,
