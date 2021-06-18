@@ -1,17 +1,19 @@
 {
-    "id": "your-plugin-id",
-    "version": "0.1.0",
+    "id": "nlp-amazon-translation",
+    "version": "1.0.0",
     "meta": {
-        "label": "Plugin template - Replace by your plugin label",
-        "category": "Your category (optional)",
-        "description": "Your description (keep it short and simple)",
-        "author": "Organization (firstName LASTNAME)",
-        "icon": "icon-font-awesome-3.2.1",
+        "label": "Amazon Translation",
+        "category": "Natural Language Processing",
+        "description": "Use Amazon Translate to translate text",
+        "author": "Dataiku (Niklas MUENNIGHOFF, Mehdi HAMOUMI)",
+        "icon": "icon-amazon-translate icon-cloud",
         "licenseInfo": "Apache Software License",
-        "url": "https://www.dataiku.com/product/plugins/your-plugin-id/",
+        "supportLevel": "NOT_SUPPORTED",
+        "url": "https://www.dataiku.com/product/plugins/nlp-amazon-translation/",
         "tags": [
-            "myTag"
-        ],
-        "supportLevel": "NOT_SUPPORTED"
+            "Amazon",
+            "Cloud",
+            "NLP"
+        ]
     }
 }

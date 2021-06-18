@@ -1,0 +1,76 @@
+{
+    "meta": {
+        "label": "API configuration",
+        "description": "Define presets for users to call the API with specific credentials, quota and parallelization parameters",
+        "icon": "icon-amazon-translate icon-cloud"
+    },
+    "defaultDefinableAtProjectLevel": true,
+    "defaultDefinableInline": false,
+    "definableInline": false,
+    "params": [
+        {
+            "name": "separator_authentification",
+            "label": "Authentification",
+            "type": "SEPARATOR",
+            "description": "Please refer to the Amazon documentation: https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys"
+        },
+        {
+            "name": "aws_access_key_id",
+            "label": "AWS access key id",
+            "description": "AWS access key as string. If empty, checks environment variables (https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html#environment-variables).",
+            "type": "STRING",
+            "mandatory": false
+        },
+        {
+            "name": "aws_secret_access_key",
+            "label": "AWS secret access key",
+            "description": "AWS secret access key as string. If empty, checks environment variables (https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html#environment-variables).",
+            "type": "PASSWORD",
+            "mandatory": false
+        },
+        {
+            "name": "aws_session_token",
+            "label": "AWS session token",
+            "description": "Optional AWS session token as string. If empty, checks environment variables (https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html#environment-variables).",
+            "type": "STRING",
+            "mandatory": false
+        },
+        {
+            "name": "aws_region_name",
+            "label": "AWS region name",
+            "description": "AWS region name as a string. If empty, checks environment variables (https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html#using-environment-variables).",
+            "type": "STRING",
+            "mandatory": false
+        },
+        {
+            "name": "separator_performance",
+            "label": "Parallelization",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "parallel_workers",
+            "label": "Concurrency",
+            "description": "Number of threads calling the API in parallel (max 100). Increase to speed-up computation.",
+            "type": "INT",
+            "mandatory": true,
+            "defaultValue": 4,
+            "minI": 1,
+            "maxI": 100
+        },
+        {
+            "name": "separator_api_quota",
+            "label": "Attempts",
+            "type": "SEPARATOR"
+        },
+        {
+            "name": "max_attempts",
+            "label": "Maximum Attempts",
+            "description": "Maximum number of retry attempts when an API request fails.",
+            "type": "INT",
+            "mandatory": true,
+            "defaultValue": 5,
+            "minI": 1,
+            "maxI": 100
+        }
+    ]
+}
