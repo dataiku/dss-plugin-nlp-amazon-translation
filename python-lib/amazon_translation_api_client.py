@@ -41,11 +41,8 @@ def get_client(
             )
         except NoRegionError as e:
             logging.info(
-                "The region could not be loaded from the environment. "
-                "If you have specified the region in the environment, "
-                "DSS may not be able to access the environemt, "
-                "such as in a User Isolation Framework setup. "
-                "You may have to specify credentials in the plugin configuration."
+                "The region could not be loaded from environment variables. "
+                "Please specify in the plugin's API credentials settings."
             )
             logging.error(e)
             raise
