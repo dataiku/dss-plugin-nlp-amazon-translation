@@ -16,77 +16,77 @@ from plugin_io_utils import move_api_columns_to_end
 
 
 LANGUAGE_CODE_LABELS = {
-    'af': 'Afrikaans',
-    'am': 'Amharic',
-    'ar': 'Arabic',
-    'az': 'Azerbaijani',
-    'bg': 'Bulgarian',
-    'bn': 'Bengali',
-    'bs': 'Bosnian',
-    'ca': 'Catalan',
-    'cs': 'Czech',
-    'cy': 'Welsh',
-    'da': 'Danish',
-    'de': 'German',
-    'el': 'Greek',
-    'en': 'English',
-    'es': 'Spanish',
-    'es-MX': 'Spanish (Mexico)',
-    'et': 'Estonian',
-    'fa': 'Persian',
-    'fa-AF': 'Dari',
-    'fi': 'Finnish',
-    'fr': 'French',
-    'fr-CA': 'French (Canada)',
-    'gu': 'Gujarati',
-    'ha': 'Hausa',
-    'he': 'Hebrew',
-    'hi': 'Hindi',
-    'hr': 'Croatian',
-    'ht': 'Haitian Creole',
-    'hu': 'Hungarian',
-    'hy': 'Armenian',
-    'id': 'Indonesian',
-    'is': 'Icelandic',
-    'it': 'Italian',
-    'ja': 'Japanese',
-    'ka': 'Georgian',
-    'kk': 'Kazakh',
-    'kn': 'Kannada',
-    'ko': 'Korean',
-    'lt': 'Lithuanian',
-    'lv': 'Latvian',
-    'mk': 'Macedonian',
-    'ml': 'Malayalam',
-    'mn': 'Mongolian',
-    'ms': 'Malay',
-    'mt': 'Maltese',
-    'nl': 'Dutch',
-    'no': 'Norwegian',
-    'pl': 'Polish',
-    'ps': 'Pashto',
-    'pt': 'Portuguese',
-    'ro': 'Romanian',
-    'ru': 'Russian',
-    'si': 'Sinhala',
-    'sk': 'Slovak',
-    'sl': 'Slovenian',
-    'so': 'Somali',
-    'sq': 'Albanian',
-    'sr': 'Serbian',
-    'sv': 'Swedish',
-    'sw': 'Swahili',
-    'ta': 'Tamil',
-    'te': 'Telugu',
-    'th': 'Thai',
-    'tl': 'Tagalog',
-    'tr': 'Turkish',
-    'uk': 'Ukrainian',
-    'ur': 'Urdu',
-    'uz': 'Uzbek',
-    'vi': 'Vietnamese',
-    'zh': 'Chinese (Simplified)',
-    'zh-TW': 'Chinese (Traditional)'
+    "af": "Afrikaans",
+    "am": "Amharic",
+    "ar": "Arabic",
+    "az": "Azerbaijani",
+    "bg": "Bulgarian",
+    "bn": "Bengali",
+    "bs": "Bosnian",
+    "ca": "Catalan",
+    "cs": "Czech",
+    "cy": "Welsh",
+    "da": "Danish",
+    "de": "German",
+    "el": "Greek",
+    "en": "English",
+    "es": "Spanish",
+    "es-MX": "Spanish (Mexico)",
+    "et": "Estonian",
+    "fa": "Persian",
+    "fa-AF": "Dari",
+    "fi": "Finnish",
+    "fr": "French",
+    "fr-CA": "French (Canada)",
+    "gu": "Gujarati",
+    "ha": "Hausa",
+    "he": "Hebrew",
+    "hi": "Hindi",
+    "hr": "Croatian",
+    "ht": "Haitian Creole",
+    "hu": "Hungarian",
+    "hy": "Armenian",
+    "id": "Indonesian",
+    "is": "Icelandic",
+    "it": "Italian",
+    "ja": "Japanese",
+    "ka": "Georgian",
+    "kk": "Kazakh",
+    "kn": "Kannada",
+    "ko": "Korean",
+    "lt": "Lithuanian",
+    "lv": "Latvian",
+    "mk": "Macedonian",
+    "ml": "Malayalam",
+    "mn": "Mongolian",
+    "ms": "Malay",
+    "mt": "Maltese",
+    "nl": "Dutch",
+    "no": "Norwegian",
+    "pl": "Polish",
+    "ps": "Pashto",
+    "pt": "Portuguese",
+    "ro": "Romanian",
+    "ru": "Russian",
+    "si": "Sinhala",
+    "sk": "Slovak",
+    "sl": "Slovenian",
+    "so": "Somali",
+    "sq": "Albanian",
+    "sr": "Serbian",
+    "sv": "Swedish",
+    "sw": "Swahili",
+    "ta": "Tamil",
+    "te": "Telugu",
+    "th": "Thai",
+    "tl": "Tagalog",
+    "tr": "Turkish",
+    "uk": "Ukrainian",
+    "ur": "Urdu",
+    "uz": "Uzbek",
+    "vi": "Vietnamese",
+    "zh": "Chinese (Simplified)",
+    "zh-TW": "Chinese (Traditional)",
 }
 
 # ==============================================================================
@@ -113,7 +113,8 @@ class GenericAPIFormatter:
         self.error_handling = error_handling
         self.api_column_names = build_unique_column_names(input_df, column_prefix)
         self.column_description_dict = {
-            v: API_COLUMN_NAMES_DESCRIPTION_DICT[k] for k, v in self.api_column_names._asdict().items()
+            v: API_COLUMN_NAMES_DESCRIPTION_DICT[k]
+            for k, v in self.api_column_names._asdict().items()
         }
 
     def format_row(self, row: Dict) -> Dict:
@@ -146,7 +147,9 @@ class TranslationAPIFormatter(GenericAPIFormatter):
         self.translated_text_column_name = generate_unique(
             f"{input_column}_{target_language.replace('-', '_')}", input_df.columns, prefix=None
         )
-        self.detected_language_column_name = generate_unique(f"{input_column}_language", input_df.columns, prefix=None)
+        self.detected_language_column_name = generate_unique(
+            f"{input_column}_language", input_df.columns, prefix=None
+        )
         self.source_language = source_language
         self.input_column = input_column
         self.input_df_columns = input_df.columns
@@ -167,6 +170,8 @@ class TranslationAPIFormatter(GenericAPIFormatter):
         raw_response = row[self.api_column_names.response]
         response = safe_json_loads(raw_response, self.error_handling)
         if not self.source_language:
-            row[self.detected_language_column_name] = LANGUAGE_CODE_LABELS.get(response.get("SourceLanguageCode", ""), "")
+            row[self.detected_language_column_name] = LANGUAGE_CODE_LABELS.get(
+                response.get("SourceLanguageCode", ""), ""
+            )
         row[self.translated_text_column_name] = response.get("TranslatedText", "")
         return row

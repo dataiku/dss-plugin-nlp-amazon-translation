@@ -99,14 +99,22 @@ def api_call_batch(
     """
     if error_handling == ErrorHandlingEnum.FAIL:
         response = api_call_function(batch=batch, **api_call_function_kwargs)
-        batch = batch_api_response_parser(batch=batch, response=response, api_column_names=api_column_names)
-        errors = [row[api_column_names.error_message] for row in batch if row[api_column_names.error_message] != ""]
+        batch = batch_api_response_parser(
+            batch=batch, response=response, api_column_names=api_column_names
+        )
+        errors = [
+            row[api_column_names.error_message]
+            for row in batch
+            if row[api_column_names.error_message] != ""
+        ]
         if len(errors) != 0:
             raise Exception("API returned errors: " + str(errors))
     else:
         try:
             response = api_call_function(batch=batch, **api_call_function_kwargs)
-            batch = batch_api_response_parser(batch=batch, response=response, api_column_names=api_column_names)
+            batch = batch_api_response_parser(
+                batch=batch, response=response, api_column_names=api_column_names
+            )
         except api_exceptions as e:
             logging.warning(str(e))
             error_type = str(type(e).__qualname__)
@@ -144,7 +152,11 @@ def convert_api_results_to_df(
     record_list = [{col: result.get(col) for col in output_schema.keys()} for result in api_results]
     api_column_list = [c for c in api_column_names if c not in columns_to_exclude]
     output_column_list = list(input_df.columns) + api_column_list
-    output_df = pd.DataFrame.from_records(record_list).astype(output_schema).reindex(columns=output_column_list)
+    output_df = (
+        pd.DataFrame.from_records(record_list)
+        .astype(output_schema)
+        .reindex(columns=output_column_list)
+    )
     assert len(output_df.index) == len(input_df.index)
     return output_df
 
@@ -191,15 +203,25 @@ def api_parallelizer(
     api_results = []
     with ThreadPoolExecutor(max_workers=parallel_workers) as pool:
         if api_support_batch:
-            futures = [pool.submit(api_call_batch, batch=batch, **pool_kwargs) for batch in df_iterator]
+            futures = [
+                pool.submit(api_call_batch, batch=batch, **pool_kwargs) for batch in df_iterator
+            ]
         else:
-            futures = [pool.submit(api_call_single_row, row=row, **pool_kwargs) for row in df_iterator]
+            futures = [
+                pool.submit(api_call_single_row, row=row, **pool_kwargs) for row in df_iterator
+            ]
         for f in tqdm_auto(as_completed(futures), total=len_iterator):
             api_results.append(f.result())
     if api_support_batch:
         api_results = flatten(api_results)
-    output_df = convert_api_results_to_df(input_df, api_results, api_column_names, error_handling, verbose)
+    output_df = convert_api_results_to_df(
+        input_df, api_results, api_column_names, error_handling, verbose
+    )
     num_api_error = sum(output_df[api_column_names.response] == "")
     num_api_success = len(input_df.index) - num_api_error
-    logging.info("Remote API call results: {} rows succeeded, {} rows failed.".format(num_api_success, num_api_error))
+    logging.info(
+        "Remote API call results: {} rows succeeded, {} rows failed.".format(
+            num_api_success, num_api_error
+        )
+    )
     return output_df

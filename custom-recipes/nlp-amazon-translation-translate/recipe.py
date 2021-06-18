@@ -31,16 +31,18 @@ source_language = get_recipe_config().get("source_language", "")
 # Params for parallelization
 column_prefix = "translation_api"
 parallel_workers = api_configuration_preset.get("parallel_workers")
-error_handling = ErrorHandlingEnum.FAIL if get_recipe_config().get("fail_on_error") else ErrorHandlingEnum.LOG
+error_handling = (
+    ErrorHandlingEnum.FAIL if get_recipe_config().get("fail_on_error") else ErrorHandlingEnum.LOG
+)
 
 # Params for translation
 client = get_client(
-    aws_access_key_id=api_configuration_preset.get("aws_access_key_id"), 
-    aws_secret_access_key=api_configuration_preset.get("aws_secret_access_key"), 
-    aws_session_token=api_configuration_preset.get("aws_session_token"), 
+    aws_access_key_id=api_configuration_preset.get("aws_access_key_id"),
+    aws_secret_access_key=api_configuration_preset.get("aws_secret_access_key"),
+    aws_session_token=api_configuration_preset.get("aws_session_token"),
     aws_region_name=api_configuration_preset.get("aws_region_name"),
-    max_attempts=api_configuration_preset.get("max_attempts")
-    )
+    max_attempts=api_configuration_preset.get("max_attempts"),
+)
 
 # ==============================================================================
 # DEFINITIONS
@@ -51,7 +53,10 @@ output_dataset = dataiku.Dataset(get_output_names_for_role("output_dataset")[0])
 validate_column_input(text_column, [col["name"] for col in input_dataset.read_schema()])
 input_df = input_dataset.get_dataframe()
 
-def call_translation_api(row: Dict, text_column: AnyStr, target_language: AnyStr, source_language: AnyStr) -> AnyStr:
+
+def call_translation_api(
+    row: Dict, text_column: AnyStr, target_language: AnyStr, source_language: AnyStr
+) -> AnyStr:
     """
     Calls Amazon Translation API. Source & target language are mandatory.
     """
@@ -59,11 +64,19 @@ def call_translation_api(row: Dict, text_column: AnyStr, target_language: AnyStr
     if not isinstance(text, str) or str(text).strip() == "":
         return json.dumps({})
     else:
-        response = client.translate_text(Text=text, TargetLanguageCode=target_language, SourceLanguageCode=source_language)
+        response = client.translate_text(
+            Text=text, TargetLanguageCode=target_language, SourceLanguageCode=source_language
+        )
         return json.dumps(response)
 
+
 formatter = TranslationAPIFormatter(
-    input_df=input_df, input_column=text_column, target_language=target_language, source_language=source_language, column_prefix=column_prefix, error_handling=error_handling
+    input_df=input_df,
+    input_column=text_column,
+    target_language=target_language,
+    source_language=source_language,
+    column_prefix=column_prefix,
+    error_handling=error_handling,
 )
 
 # ==============================================================================
@@ -79,7 +92,7 @@ df = api_parallelizer(
     error_handling=error_handling,
     text_column=text_column,
     target_language=target_language,
-    source_language=source_language
+    source_language=source_language,
 )
 output_df = formatter.format_df(df)
 output_dataset.write_with_schema(output_df)

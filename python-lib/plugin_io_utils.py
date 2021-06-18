@@ -57,7 +57,9 @@ def generate_unique(name: AnyStr, existing_names: List, prefix: AnyStr = COLUMN_
     raise Exception("Failed to generated a unique name")
 
 
-def build_unique_column_names(existing_names: List[AnyStr], column_prefix: AnyStr = COLUMN_PREFIX) -> NamedTuple:
+def build_unique_column_names(
+    existing_names: List[AnyStr], column_prefix: AnyStr = COLUMN_PREFIX
+) -> NamedTuple:
     """
     Helper function to the "api_parallelizer" main function.
     Initializes a named tuple of column names from ApiColumnNameTuple, ensure columns are unique.
@@ -79,7 +81,9 @@ def validate_column_input(column_name: AnyStr, column_list: List[AnyStr]) -> Non
 
 
 def safe_json_loads(
-    str_to_check: AnyStr, error_handling: ErrorHandlingEnum = ErrorHandlingEnum.LOG, verbose: bool = False,
+    str_to_check: AnyStr,
+    error_handling: ErrorHandlingEnum = ErrorHandlingEnum.LOG,
+    verbose: bool = False,
 ) -> Dict:
     """
     Wrap json.loads with an additional parameter to handle errors:
@@ -99,7 +103,9 @@ def safe_json_loads(
 
 
 def move_api_columns_to_end(
-    df: pd.DataFrame, api_column_names: NamedTuple, error_handling: ErrorHandlingEnum = ErrorHandlingEnum.LOG
+    df: pd.DataFrame,
+    api_column_names: NamedTuple,
+    error_handling: ErrorHandlingEnum = ErrorHandlingEnum.LOG,
 ) -> pd.DataFrame:
     """
     Move non-human-readable API columns to the end of the dataframe

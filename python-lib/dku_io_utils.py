@@ -11,7 +11,9 @@ import dataiku
 
 
 def set_column_description(
-    output_dataset: dataiku.Dataset, column_description_dict: Dict, input_dataset: dataiku.Dataset = None,
+    output_dataset: dataiku.Dataset,
+    column_description_dict: Dict,
+    input_dataset: dataiku.Dataset = None,
 ) -> None:
     """
     Set column descriptions of the output dataset based on a dictionary of column descriptions
