@@ -6,6 +6,7 @@ import logging
 from collections import OrderedDict
 from collections import namedtuple
 from enum import Enum
+import re
 from typing import AnyStr
 from typing import Dict
 from typing import List
@@ -40,21 +41,27 @@ class ErrorHandlingEnum(Enum):
 # ==============================================================================
 
 
-def generate_unique(name: AnyStr, existing_names: List, prefix: AnyStr = COLUMN_PREFIX) -> AnyStr:
+def generate_unique(name: AnyStr, existing_names: List[AnyStr], prefix: AnyStr = None) -> AnyStr:
+    """Generate a unique name among existing ones by suffixing a number and adding a prefix
+    Args:
+        name: Input name
+        existing_names: List of existing names
+        prefix: Optional prefix to add to the output name
+    Returns:
+       Unique name with a number suffix in case of conflict, and an optional prefix
     """
-    Generate a unique name among existing ones by suffixing a number. Can also add an optional prefix.
-    """
-    if prefix is not None:
-        base_name = prefix + "_" + name
+    name = re.sub(r"[^\x00-\x7F]", "_", name).replace(
+        " ", "_"
+    )  # replace non ASCII and whitespace characters by an underscore _
+    if prefix:
+        new_name = f"{prefix}_{name}"
     else:
-        base_name = name
-
-    new_name = base_name
+        new_name = name
     for j in range(1, 1001):
         if new_name not in existing_names:
             return new_name
-        new_name = base_name + "_{}".format(j)
-    raise Exception("Failed to generated a unique name")
+        new_name = f"{new_name}_{j}"
+    raise RuntimeError(f"Failed to generated a unique name for '{name}'")
 
 
 def build_unique_column_names(
