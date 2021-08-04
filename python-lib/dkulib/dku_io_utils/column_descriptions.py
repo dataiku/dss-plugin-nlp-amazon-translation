@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# From https://github.com/dataiku/dss-plugin-dkulib/blob/a45af648cc0062e68029123e57c2895c13ff24dd/core/dku_io_utils/column_descriptions.py
 """Module with read/write utility to set dataset column descriptions based on the Dataiku API"""
 
 from typing import Dict, Optional
@@ -11,14 +10,18 @@ def get_description_for_column(
     dataset_schema: dataiku.core.dataset.Schema, column_name: str
 ) -> str:
     """Gets the column description from a dataiku dataset schema for a given column name
+
     The dataiku dataset schema is a list of dictionaries as following:
     [{"name": "column1", "type": "string", "comment": "blabla"}, {...}].
     The optional "comment" key corresponds to the column description.
+
     Args:
         dataset_schema: dataiku.Dataset schema instance obtained from the `read_schema` method
         column_name: Name of the column whose description you want to retrieve
+
     Returns:
         The column description if it exists
+
     """
     for column in dataset_schema:
         if column["name"] == column_name and "comment" in column:
@@ -31,12 +34,15 @@ def set_column_descriptions(
     input_dataset: Optional[dataiku.Dataset] = None,
 ) -> None:
     """Sets column descriptions of the output dataset based on a dictionary of column descriptions
+
     Can also retain the column descriptions from the input dataset if specified
+
     Args:
         output_dataset: Output dataiku.Dataset instance
         column_descriptions: Dictionary holding column descriptions (value) by column name (key)
         input_dataset: Optional input dataiku.Dataset instance
             in case you want to retain input column descriptions
+
     """
     output_schema = output_dataset.read_schema()
     # First, set all output column descriptions to those of the input dataset if specified

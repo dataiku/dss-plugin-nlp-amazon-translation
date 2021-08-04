@@ -10,8 +10,8 @@ from dataiku.customrecipe import get_output_names_for_role
 
 from amazon_translation_api_client import API_EXCEPTIONS, get_client
 from amazon_translation_api_formatting import TranslationAPIFormatter
-from column_descriptions import set_column_descriptions
-from parallelizer import DataFrameParallelizer
+from dkulib.dku_io_utils import set_column_descriptions
+from dkulib.parallelizer import DataFrameParallelizer
 from plugin_io_utils import ErrorHandlingEnum
 from plugin_io_utils import validate_column_input
 
