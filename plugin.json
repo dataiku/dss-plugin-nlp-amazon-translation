@@ -1,6 +1,6 @@
 {
     "id": "nlp-amazon-translation",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "meta": {
         "label": "Amazon Translation",
         "category": "Natural Language Processing",
@@ -11,7 +11,7 @@
         "supportLevel": "NOT_SUPPORTED",
         "url": "https://www.dataiku.com/product/plugins/nlp-amazon-translation/",
         "tags": [
-            "Amazon",
+            "AWS",
             "Cloud",
             "NLP"
         ]

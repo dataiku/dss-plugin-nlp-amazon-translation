@@ -1,5 +1,9 @@
 # Changelog
 
+## [Version 1.0.2](https://github.com/dataiku/dss-plugin-nlp-amazon-translation/releases/tag/v1.0.2) - Tag change - 2021-09
+
+- 🧐 Change tag Amazon -> AWS to conform with other plugins
+
 ## [Version 1.0.1](https://github.com/dataiku/dss-plugin-nlp-amazon-translation/releases/tag/v1.0.1) - Dkulib integration - 2021-08
 
 - ✨ Integrate dkulib as separate folder with updated functions
