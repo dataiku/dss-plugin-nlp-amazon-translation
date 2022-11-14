@@ -1,5 +1,10 @@
 # Changelog
 
+
+## [Version 1.0.3](https://github.com/dataiku/dss-plugin-nlp-amazon-translation/releases/tag/v1.0.3) - Consistent schema - 2022-11
+
+- Maintain consistent output schema in case of empty inputs
+
 ## [Version 1.0.2](https://github.com/dataiku/dss-plugin-nlp-amazon-translation/releases/tag/v1.0.2) - Tag change - 2021-09
 
 - 🧐 Change tag Amazon -> AWS to conform with other plugins
