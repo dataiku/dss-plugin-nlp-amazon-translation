@@ -123,6 +123,11 @@ class GenericAPIFormatter:
     def format_df(self, df: pd.DataFrame) -> pd.DataFrame:
         logging.info("Formatting API results...")
         df = df.apply(func=self.format_row, axis=1)
+        # In case of an empty dataset add empty columns to maintain consistent output schema
+        if df.empty:
+            if not self.source_language:
+                df[self.detected_language_column_name] = None
+            df[self.translated_text_column_name] = None
         df = move_api_columns_to_end(df, self.api_column_names, self.error_handling)
         logging.info("Formatting API results: Done.")
         return df
