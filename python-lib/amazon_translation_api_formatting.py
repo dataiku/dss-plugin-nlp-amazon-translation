@@ -124,7 +124,7 @@ class GenericAPIFormatter:
         logging.info("Formatting API results...")
         df = df.apply(func=self.format_row, axis=1)
         # In case of an empty dataset add empty columns to maintain consistent output schema
-        if len(df) == 0:
+        if df.empty:
             if not self.source_language:
                 df[self.detected_language_column_name] = None
             df[self.translated_text_column_name] = None
