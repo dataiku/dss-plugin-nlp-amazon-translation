@@ -1,5 +1,9 @@
 # Changelog
 
+## [Version 1.1.1](https://github.com/dataiku/dss-plugin-nlp-amazon-translation/releases/tag/v1.1.1) - Documentation update - 2026-10
+
+- Update reference documentation links.
+
 ## [Version 1.1.0](https://github.com/dataiku/dss-plugin-nlp-azure-translation/releases/tag/v1.1.0) - New feature - 2023-05
 
 - ✨ Added support for Python versions 3.8, 3.9, 3.10, 3.11

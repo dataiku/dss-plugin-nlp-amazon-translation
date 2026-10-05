@@ -4,7 +4,7 @@
 
 This Dataiku DSS plugin provides a recipe to translate a text column to another language with [Amazon Translate](https://aws.amazon.com/translate/).
 
-Documentation: https://www.dataiku.com/product/plugins/nlp-amazon-translation/
+Documentation: https://doc.dataiku.com/dss/latest/nlp/nlp-amazon-translation.html
 
 ## Release notes
 
